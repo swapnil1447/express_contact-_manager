@@ -15,3 +15,6 @@ app.use(errorHandler);
 app.listen(()=>{
     console.log(`port iss set to ${port}`)
 })
+
+//const a=require("express")//for import use require
+//const app=express

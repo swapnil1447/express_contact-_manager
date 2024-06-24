@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcrypt")
+const User = require("../models/useModel")
 //@desc register
 //@routes POST /api/contact 
 //@access public  
@@ -56,7 +57,7 @@ const loginUser = asyncHandler(async (req,res)=>{
             },
         },
         process.env.ACCESS_TOKEN_SECRET,{
-            expiresIn:"1m"
+            expiresIn:"15m"
         }
         )
         res.status(200).json({accesstoken})
